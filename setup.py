@@ -30,6 +30,8 @@ MEF_FILE_EXT = Extension(
         "meflib/meflib",
     ],
     extra_compile_args=["-O3"],
+    define_macros=[("Py_LIMITED_API", "0x03A00000")],  # Python 3.10+
+    py_limited_api=True,
 )
 
 setup(
@@ -37,4 +39,5 @@ setup(
     zip_safe=False,
     packages=["pymef", "pymef.mef_file"],
     ext_modules=[MEF_FILE_EXT],
+    options={"bdist_wheel": {"py_limited_api": "cp310"}},
 )
