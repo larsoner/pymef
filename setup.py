@@ -18,8 +18,17 @@ Rochester, MN
 United States
 """
 
+import sys
+
 from setuptools import setup, Extension
 import numpy
+
+extra_compile_args = ["-O3"]
+if sys.platform != "win32":
+    # meflib's si1 type is plain char but holds signed values (e.g., RED
+    # compression byte differences, encryption levels), so char must be signed.
+    # It is by default on x86 and Apple arm64, but not on Linux aarch64.
+    extra_compile_args.append("-fsigned-char")
 
 # the c extension module
 MEF_FILE_EXT = Extension(
@@ -29,8 +38,8 @@ MEF_FILE_EXT = Extension(
         numpy.get_include(),
         "meflib/meflib",
     ],
-    extra_compile_args=["-O3"],
-    define_macros=[("Py_LIMITED_API", "0x03A00000")],  # Python 3.10+
+    extra_compile_args=extra_compile_args,
+    define_macros=[("Py_LIMITED_API", "0x030A0000")],  # Python 3.10+
     py_limited_api=True,
 )
 

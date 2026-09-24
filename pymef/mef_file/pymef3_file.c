@@ -29,6 +29,11 @@
 #include <numpy/arrayobject.h>
 #include <numpy/npy_math.h>
 
+#include <limits.h>
+#if CHAR_MIN == 0
+#error "meflib requires a signed char (si1); compile with -fsigned-char"
+#endif
+
 #include "meflib.c"
 #include "mefrec.c"
 
