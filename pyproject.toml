@@ -26,6 +26,7 @@ classifiers = [
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: Free Threading :: 2 - Beta",
     "Topic :: Scientific/Engineering",
 ]
 keywords = ["MEF", "Mayo", "Electrophysiology"]
@@ -45,8 +46,9 @@ repository = "https://github.com/msel-source/pymef"
 
 [tool.cibuildwheel]
 # The cp310 build produces an abi3 wheel; later versions reuse it and only run tests.
+# Free-threaded CPython (cp314t, cp315t) can't use the limited API, so it gets
+# version-specific wheels.
 build = "cp3*-*"
-skip = "cp3*t-*"  # free-threaded CPython does not support the limited API
 archs = "native"
 test-requires = "pytest"
 test-sources = ["tests"]

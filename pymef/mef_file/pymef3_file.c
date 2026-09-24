@@ -4015,7 +4015,7 @@ PyObject *map_mef3_Epoc_type(RECORD_HEADER *rh, si1 copy_metadata_to_dict) {
 /**************************  Numpy data types  ****************************/
 
 // Records
-static PyObject *create_rh_dtype() {
+static PyObject *create_rh_dtype(void) {
 
     import_array();
 
@@ -4045,7 +4045,7 @@ static PyObject *create_rh_dtype() {
     return (PyObject *) descr;
 }
 
-static PyObject *create_ri_dtype() {
+static PyObject *create_ri_dtype(void) {
     import_array();
 
     // Numpy array out
@@ -4213,7 +4213,7 @@ static PyObject *create_note_dtype_c(ui4 text_len) {
     return (PyObject *) descr;
 }
 
-static PyObject *create_seiz_dtype() {
+static PyObject *create_seiz_dtype(void) {
     import_array();
 
     // Numpy array out
@@ -4245,7 +4245,7 @@ static PyObject *create_seiz_dtype() {
     return (PyObject *) descr;
 }
 
-static PyObject *create_seiz_ch_dtype() {
+static PyObject *create_seiz_ch_dtype(void) {
 
     import_array();
 
@@ -4311,7 +4311,7 @@ static PyObject *create_sylg_dtype_c(ui4 text_len) {
     return (PyObject *) descr;
 }
 
-static PyObject *create_csti_dtype() {
+static PyObject *create_csti_dtype(void) {
     import_array();
 
     // Numpy array out
@@ -4335,7 +4335,7 @@ static PyObject *create_csti_dtype() {
     return (PyObject *) descr;
 }
 
-static PyObject *create_esti_dtype() {
+static PyObject *create_esti_dtype(void) {
     import_array();
 
     // Numpy array out
@@ -4367,7 +4367,7 @@ static PyObject *create_esti_dtype() {
     return (PyObject *) descr;
 }
 
-static PyObject *create_curs_dtype() {
+static PyObject *create_curs_dtype(void) {
     import_array();
 
     // Numpy array out
@@ -4393,7 +4393,7 @@ static PyObject *create_curs_dtype() {
     return (PyObject *) descr;
 }
 
-static PyObject *create_epoc_dtype() {
+static PyObject *create_epoc_dtype(void) {
     import_array();
 
     // Numpy array out
@@ -4422,7 +4422,7 @@ static PyObject *create_epoc_dtype() {
 }
 
 // Library
-static PyObject *create_uh_dtype() {
+static PyObject *create_uh_dtype(void) {
     import_array();
 
     // Numpy array out
@@ -4483,7 +4483,7 @@ static PyObject *create_uh_dtype() {
     return (PyObject *) descr;
 }
 
-static PyObject *create_md1_dtype() {
+static PyObject *create_md1_dtype(void) {
     import_array();
 
     // Numpy array out
@@ -4507,7 +4507,7 @@ static PyObject *create_md1_dtype() {
     return (PyObject *) descr;
 }
 
-static PyObject *create_tmd2_dtype() {
+static PyObject *create_tmd2_dtype(void) {
     import_array();
 
     // Numpy array out
@@ -4578,7 +4578,7 @@ static PyObject *create_tmd2_dtype() {
     return (PyObject *) descr;
 }
 
-static PyObject *create_vmd2_dtype() {
+static PyObject *create_vmd2_dtype(void) {
     import_array();
 
     // Numpy array out
@@ -4619,7 +4619,7 @@ static PyObject *create_vmd2_dtype() {
     return (PyObject *) descr;
 }
 
-static PyObject *create_md3_dtype() {
+static PyObject *create_md3_dtype(void) {
     import_array();
 
     // Numpy array out
@@ -4655,7 +4655,7 @@ static PyObject *create_md3_dtype() {
     return (PyObject *) descr;
 }
 
-static PyObject *create_ti_dtype() {
+static PyObject *create_ti_dtype(void) {
     import_array();
 
     // Numpy array out
@@ -4693,7 +4693,7 @@ static PyObject *create_ti_dtype() {
     return (PyObject *) descr;
 }
 
-static PyObject *create_vi_dtype() {
+static PyObject *create_vi_dtype(void) {
     import_array();
 
     // Numpy array out
@@ -4724,7 +4724,7 @@ static PyObject *create_vi_dtype() {
     return (PyObject *) descr;
 }
 
-static PyObject *create_segment_dtype() {
+static PyObject *create_segment_dtype(void) {
     import_array();
 
     // Numpy array out
@@ -4763,7 +4763,7 @@ static PyObject *create_segment_dtype() {
     return (PyObject *) descr;
 }
 
-static PyObject *create_channel_dtype() {
+static PyObject *create_channel_dtype(void) {
     import_array();
 
     // Numpy array out
@@ -4811,7 +4811,7 @@ static PyObject *create_channel_dtype() {
     return (PyObject *) descr;
 }
 
-static PyObject *create_session_dtype() {
+static PyObject *create_session_dtype(void) {
     import_array();
 
     // Numpy array out
